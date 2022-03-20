@@ -22,25 +22,17 @@ namespace Cart
             ketnoi.Open(); ;
             
 
-            if (txtEmail.Text != "ngan")
-            {
-                tb.Text = "Tên người dùng không chính xác ";
-            }
-            else
-            {
-                if (txtPassword.Text != "1234")
-                {
-                    tb.Text = "Mật khẩu không chính xác ";
-                }
+            
 
-                else
-                {   //biến session đưa tên kh từ txtuser ra biến ten kh để chuyển qua web: phiếu đăng kí sách 
-                    //Session["tenkh"] = txtUser.Text;
-                    // thông báo chúc mừng khi kh đăng nhập đúng tài khoản 
-                    //tb.Text = "Chúc mừng bạn đã đăng nhập thành công ";
-                    Response.Redirect("TongQuan.aspx");
-                }
-            }
+        }
+
+        protected void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnLogin_Click1(object sender, EventArgs e)
+        {
 
         }
     }

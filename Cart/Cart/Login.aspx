@@ -9,30 +9,59 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
     <script src="bootstrap/js/bootstrap.js"></script>
     <link href="CSS/Styles.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            left: 0px;
+            top: 1px;
+            height: 41px;
+        }
+        
+        .auto-style3 {
+            font-weight: bold;
+            font-size: large;
+            font-family: "Segoe UI Variable Display";
+        }
+        .auto-style5 {
+            font-family: "Segoe UI Variable Display";
+        }
+        .auto-style6 {
+            font-weight: bold;
+        }
+        .auto-style7 {
+            font-family: "Segoe UI Variable Display";
+            font-weight: bold;
+        }
+        
+    </style>
 </head>
-<body>
-    <div class="container-fluid">
+<body >
+    <form id="form1" runat="server">
+    <div class="auto-style2">
         <div class="login" >
             <div class="card-body">
-                <h2>Login</h2>
+                <h2 class="auto-style7"><span class="auto-style6">Đăng nhập</h2>
+                </span><span class="auto-style5">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" placeholder="Enter email" runat="server"/>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <asp:Label ID="Label1" runat="server" Text="Địa chỉ email"></asp:Label>
+                    <asp:TextBox ID="txtEmail" class="form-control" aria-describedby="emailHelp" placeholder="Email" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="txtPassword" placeholder="Password" runat="server"/>
+                    <asp:Label ID="Label2" runat="server" Text="Mật khẩu"></asp:Label>
+                    <asp:TextBox ID="txtBassword" class="form-control" placeholder="Mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" runat="server"/>
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Default checkbox
-                    </label>
+                    <asp:CheckBox ID="CheckBox1" class="form-check-input" runat="server" Text="Nhớ mật khẩu" CssClass="auto-style1" />
+                    </span>
                 </div>
-                <button type="submit" id="btnLogin" class="btn btn-primary">Login</button>
+                <strong>
+                <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" Text="Đăng nhập" Height="58px" Width="160px" CssClass="auto-style3" ForeColor="#666666" OnClick="btnLogin_Click1" />
+                <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" Height="58px" Width="160px" CssClass="auto-style3" ForeColor="#666666" OnClick="btnLogin_Click1" />
+                
+                </strong>
+                
             </div>
         </div>
     </div>
+    </form>
 </body>
 </html>

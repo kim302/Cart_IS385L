@@ -44,7 +44,7 @@
                                             </div>
 
                                             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                <asp:Button ID="btnLogin" class="btn btn-primary mr-3" runat="server" Text="Đăng Nhập" width="130px"/>
+                                                <asp:Button ID="btnLogin" class="btn btn-primary mr-3" runat="server" Text="Đăng Nhập" width="130px" OnClick="btnLogin_Click"/>
                                                 <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" width="130px" OnClick="btnRegister_Click1"/>
                                             </div>
                                             <div class=" mx-4 mb-3 mb-lg-4">

@@ -59,7 +59,7 @@
                                                 </label>
                                             </div>
                                             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký"/>
+                                                <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" OnClick="btnRegister_Click1"/>
                                             </div>
 
                                         </div>

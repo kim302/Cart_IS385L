@@ -16,7 +16,7 @@ namespace Cart
             txtPassword.Text = (string)Session["Password"];
         }
 
-        protected void btnLogin_Click2(object sender, EventArgs e)
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
             //Kết nối dữ liệu 
             string path = Server.MapPath("App_Data/CART_IS385L.mdf");
@@ -46,5 +46,6 @@ namespace Cart
         {
             Response.Redirect("Register.aspx");
         }
+
     }
 }

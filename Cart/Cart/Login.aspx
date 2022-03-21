@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-group">
                         <asp:Label ID="Label2" runat="server" Text="Mật khẩu"></asp:Label>
-                        <asp:TextBox ID="txtBassword" class="form-control" placeholder="Mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" class="form-control" placeholder="Mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
                     </div>
                     <div class="form-check">
                         <asp:CheckBox ID="CheckBox1" class="form-check-input" runat="server" Text="Nhớ mật khẩu" CssClass="auto-style1" />
@@ -54,7 +54,6 @@
                     <strong>
                         <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" Text="Đăng nhập" Height="58px" Width="160px" />
                         <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" Height="58px" Width="160px"/>
-                
                     </strong>
                 </div>
             </div>

@@ -12,45 +12,110 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container-fluid d-flex align-items-center justify-content-center">
-            <div class="register" >
-                <div class="card-body">
-                    <h2 class="auto-style7">Đăng ký</h2>
-                    <div class="form-group">
-                        <asp:Label ID="Label1" runat="server" Text="Địa chỉ email"></asp:Label>
-                        <asp:TextBox ID="txtEmail" class="form-control" aria-describedby="emailHelp" placeholder="Email" runat="server"></asp:TextBox>
+        <section class="vh-100" style="background-color: #eee;">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-lg-12 col-xl-11">
+                        <div class="card text-black" style="border-radius: 25px;">
+                            <div class="card-body p-md-5">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Đăng ký</p>
+
+                                        <div class="mx-1 mx-md-4">
+
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <asp:TextBox ID="txtFullName" class="form-control" placeholder="Họ và tên" runat="server"></asp:TextBox>
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Chưa nhập họ tên" ForeColor="#CC0000" ControlToValidate="txtFullname">(*)</asp:RequiredFieldValidator>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <asp:TextBox ID="txtEmail" class="form-control" aria-describedby="emailHelp" placeholder="Email" runat="server"></asp:TextBox>
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Chưa nhập email" ForeColor="#CC0000" ControlToValidate="txtEmail">(*)</asp:RequiredFieldValidator>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <asp:TextBox ID="txtPassword" class="form-control" placeholder="Mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Chưa nhập mật khẩu" ForeColor="#CC0000" ControlToValidate="txtPassword">(*)</asp:RequiredFieldValidator>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <asp:TextBox ID="txtRePass" class="form-control" placeholder="Nhập lại mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
+                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtRePass" ErrorMessage="Nhập lại mật khẩu" ForeColor="#CC0000">(*)</asp:RequiredFieldValidator>
+                                                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtRePass" ErrorMessage="Mật khẩu không khớp" ForeColor="#CC0000">(*)</asp:CompareValidator>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-check d-flex justify-content-center mb-3">
+                                                <asp:CheckBox ID="CheckBox1" class="form-check-input me-2" runat="server" CssClass="auto-style1" />
+                                                <label class="form-check-label" for="form2Example3">
+                                                    Tôi đồng ý tất cả các điều khoản trong <a href="#!">Điều khoản dịch vụ</a>
+                                                </label>
+                                            </div>
+                                            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                                <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" OnClick="btnRegister_Click1" />
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Thông tin</p>
+                                        <div class="mx-1 mx-md-4">
+
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <asp:TextBox ID="txtBirthday" class="form-control" placeholder="Ngày sinh" runat="server" TextMode="Date"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <asp:TextBox ID="txtGender" class="form-control" placeholder="Giới tính" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <asp:TextBox ID="txtNumberPhone" class="form-control" placeholder="Số điện thoại" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <asp:TextBox ID="txtAddress" class="form-control" placeholder="Địa chỉ" runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <asp:Label ID="lbNotify" runat="server"></asp:Label>
+                                                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" Width="382px" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-inline">
-                        <asp:Label ID="Label2" runat="server" Text="Mật khẩu"></asp:Label>
-                        <asp:TextBox ID="txtBassword" class="form-control" placeholder="Mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
-                        <asp:Label ID="Label3" runat="server" Text="Nhập lại mật khẩu"></asp:Label>
-                        <asp:TextBox ID="txtRePass" class="form-control" placeholder="Nhập lại mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
-                    </div>
-                    <h4 class="auto-style7">Thông tin
-                        </h4>
-                    <div class="form-inline">
-                        <asp:Label ID="Label4" runat="server" Text="Họ và tên"></asp:Label>
-                        <asp:TextBox ID="txtFullName" class="form-control" placeholder="Họ và tên" runat="server"></asp:TextBox>
-                        <asp:Label ID="Label5" runat="server" Text="Ngày sinh"></asp:Label>
-                        <asp:TextBox ID="txtBirthday" class="form-control" placeholder="Ngày sinh" runat="server" TextMode="Date"></asp:TextBox>
-                    </div>
-                    <div class="form-inline">
-                        <asp:Label ID="Label6" runat="server" Text="Giới tính"></asp:Label>
-                        <asp:TextBox ID="txtGender" class="form-control" placeholder="Giới tính" runat="server" ></asp:TextBox>
-                        <asp:Label ID="Label8" runat="server" Text="Số điện thoại"></asp:Label>
-                        <asp:TextBox ID="TextBox1" class="form-control" placeholder="Số điện thoại" runat="server" ></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="Label7" runat="server" Text="Địa chỉ"></asp:Label>
-                        <asp:TextBox ID="txtAddress" class="form-control" placeholder="Địa chỉ" runat="server" ></asp:TextBox>
-                    </div>
-                    <strong>
-                        <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" Text="Đăng nhập" Height="58px" Width="160px" />
-                        <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" Height="58px" Width="160px"/>
-                    </strong>
                 </div>
             </div>
-        </div>
+        </section>
     </form>
 </body>
 </html>

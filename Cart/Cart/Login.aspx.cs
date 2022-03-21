@@ -42,7 +42,7 @@ namespace Cart
             }
         }
 
-        protected void btnRegister_Click(object sender, EventArgs e)
+        protected void btnRegister_Click1(object sender, EventArgs e)
         {
             Response.Redirect("Register.aspx");
         }

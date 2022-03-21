@@ -17,7 +17,7 @@ namespace Cart
             txtPassword.Text = (string)Session["PASSWORD"];
         }
 
-        protected void btnRegister_Click(object sender, EventArgs e)
+        protected void btnRegister_Click1(object sender, EventArgs e)
         {
             //ket noi dl
             String url = Server.MapPath("App_Data/CART_IS385L.mdf");
@@ -29,7 +29,7 @@ namespace Cart
             con.Open();
 
             //sql command
-            String sql_command = "select * from USER where EMAIL=N'" + txtEmail.Text + "'";
+            String sql_command = "select * from USER where EMAIL =N'" + txtEmail.Text + "' ";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandType = System.Data.CommandType.Text;

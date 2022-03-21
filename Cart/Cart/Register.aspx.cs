@@ -13,8 +13,7 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtEmail.Text = (string)Session["EMAIL"];
-            txtPassword.Text = (string)Session["PASSWORD"];
+            
         }
 
         protected void btnRegister_Click1(object sender, EventArgs e)
@@ -58,8 +57,7 @@ namespace Cart
                     lenhthem.CommandText = sql_command_update;
                     lenhthem.ExecuteNonQuery();
                     lbNotify.Text = "Đăng kí thành công";
-                    //Session["EMAIL"] = txtEmail.Text;
-                    //Session["PASSWORD"] = txtPassword.Text;
+                    
                     Response.Redirect("Login.aspx");
                     Thread.Sleep(30000);
                 }

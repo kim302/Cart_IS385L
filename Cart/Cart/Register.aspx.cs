@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Threading;
 
 namespace Cart
 {
@@ -23,8 +23,6 @@ namespace Cart
             String url = Server.MapPath("App_Data/CART_IS385L.mdf");
             String strconn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + url + ";Integrated Security = True";
 
-            // Sử dụng đối tượng kết nối SQL
-            //Kết nối dữ liệu 
             string path = Server.MapPath("App_Data/CART_IS385L.mdf");
             SqlConnection connect = new SqlConnection();
             connect.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename = " + path + ";Integrated Security=True ";
@@ -43,14 +41,15 @@ namespace Cart
             var dong = lenhxem.ExecuteReader();
             if (dong.HasRows)
             {
-                //tb.Text = "Username available";
+                lbNotify.Text = "Username available";
             }
             else
             {
                 if (CheckBox1.Checked)
                 {
                     dong.Close();
-                    string sql_command_update = "INSERT INTO ACCOUNTS (EMAIL,PASSWORD,FULLNAME,BIRTHDAY,GENDER,ADDRESS,PHONENUMBER) VALUES(N'" +
+                    string sql_command_update = 
+                        "INSERT INTO ACCOUNTS (EMAIL,PASSWORD,FULLNAME,BIRTHDAY,GENDER,ADDRESS,PHONENUMBER) VALUES(N'" +
                         txtEmail.Text + "',N'" + txtPassword.Text + "',N'" + txtFullName.Text + "',N'" + txtBirthday.Text + "',N'"
                         + txtGender.Text + "',N'" + txtAddress.Text + "',N'" + txtNumberPhone.Text + "')";
                     SqlCommand lenhthem = new SqlCommand();
@@ -58,13 +57,13 @@ namespace Cart
                     lenhthem.CommandType = System.Data.CommandType.Text;
                     lenhthem.CommandText = sql_command_update;
                     lenhthem.ExecuteNonQuery();
-                    //tb.Text = "Sign Up successfully";
-                    //Session["Email"] = txtEmail.Text;
-                    //Session["Password"] = txtPassword.Text;
+                    lbNotify.Text = "Đăng kí thành công";
+                    //Session["EMAIL"] = txtEmail.Text;
+                    //Session["PASSWORD"] = txtPassword.Text;
                     Response.Redirect("Login.aspx");
-                    Thread.Sleep(3000);
+                    Thread.Sleep(30000);
                 }
-                //tb.Text = "Chưa đồng ý các điều khoản";
+                lbNotify.Text = "Chưa đồng ý các điều khoản";
             }
         }
     }

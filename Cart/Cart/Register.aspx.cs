@@ -22,19 +22,25 @@ namespace Cart
             //ket noi dl
             String url = Server.MapPath("App_Data/CART_IS385L.mdf");
             String strconn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + url + ";Integrated Security = True";
-            
+
+            // Sử dụng đối tượng kết nối SQL
+            //Kết nối dữ liệu 
+            string path = Server.MapPath("App_Data/CART_IS385L.mdf");
+            SqlConnection connect = new SqlConnection();
+            connect.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename = " + path + ";Integrated Security=True ";
+            connect.Open();
+
             // Sử dụng đối tượng kết nối SQL
             SqlConnection con = new SqlConnection();
             con.ConnectionString = strconn;
             con.Open();
-
-            //sql command
-            String sql_command = "select * from USER where EMAIL =N'" + txtEmail.Text + "' ";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = sql_command;
-            var dong = cmd.ExecuteReader();
+            //SQLcommand
+            string sql_command = "select * from ACCOUNTS where EMAIL=N'" + txtEmail.Text + "'";
+            SqlCommand lenhxem = new SqlCommand();
+            lenhxem.Connection = con;
+            lenhxem.CommandType = System.Data.CommandType.Text;
+            lenhxem.CommandText = sql_command;
+            var dong = lenhxem.ExecuteReader();
             if (dong.HasRows)
             {
                 //tb.Text = "Username available";
@@ -44,7 +50,7 @@ namespace Cart
                 if (CheckBox1.Checked)
                 {
                     dong.Close();
-                    string sql_command_update = "INSERT INTO USER (EMAIL,PASSWORD,FULLNAME,BIRTHDAY,GENDER,ADDRESS,PHONENUMBER) VALUES(N'" +
+                    string sql_command_update = "INSERT INTO ACCOUNTS (EMAIL,PASSWORD,FULLNAME,BIRTHDAY,GENDER,ADDRESS,PHONENUMBER) VALUES(N'" +
                         txtEmail.Text + "',N'" + txtPassword.Text + "',N'" + txtFullName.Text + "',N'" + txtBirthday.Text + "',N'"
                         + txtGender.Text + "',N'" + txtAddress.Text + "',N'" + txtNumberPhone.Text + "')";
                     SqlCommand lenhthem = new SqlCommand();
@@ -53,8 +59,8 @@ namespace Cart
                     lenhthem.CommandText = sql_command_update;
                     lenhthem.ExecuteNonQuery();
                     //tb.Text = "Sign Up successfully";
-                    Session["Email"] = txtEmail.Text;
-                    Session["Password"] = txtPassword.Text;
+                    //Session["Email"] = txtEmail.Text;
+                    //Session["Password"] = txtPassword.Text;
                     Response.Redirect("Login.aspx");
                     Thread.Sleep(3000);
                 }

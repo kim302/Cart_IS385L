@@ -12,7 +12,8 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtEmail.Text = (string)Session["Email"];
+            txtPassword.Text = (string)Session["Password"];
         }
 
         protected void btnLogin_Click2(object sender, EventArgs e)
@@ -34,7 +35,8 @@ namespace Cart
             {
                 if (nhomatkhau.Checked)
                 {
-                    Session["Email"] = txtEmail.Text;
+                    Session["EMAIL"] = txtEmail.Text;
+                    Session["PASSWORD"] = txtPassword.Text;
                 }
                 Response.Redirect("TongQuan.aspx");
             }

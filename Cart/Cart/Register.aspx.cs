@@ -13,7 +13,8 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtEmail.Text = (string)Session["EMAIL"];
+            txtPassword.Text = (string)Session["PASSWORD"];
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
@@ -40,20 +41,24 @@ namespace Cart
             }
             else
             {
-                dong.Close();
-                string sql_command_update = "INSERT INTO USER (EMAIL,PASSWORD,FULLNAME,BIRTHDAY,GENDER,ADDRESS,PHONENUMBER) VALUES(N'" +
-                    txtEmail.Text + "',N'" + txtBassword.Text + "',N'" + txtFullName.Text + "',N'" + txtBirthday.Text + "',N'" 
-                    + txtGender.Text + "',N'" + txtAddress.Text + "',N'" + txtNumberphone.Text + "')";
-                SqlCommand lenhthem = new SqlCommand();
-                lenhthem.Connection = con;
-                lenhthem.CommandType = System.Data.CommandType.Text;
-                lenhthem.CommandText = sql_command_update;
-                lenhthem.ExecuteNonQuery();
-                //tb.Text = "Sign Up successfully";
-                //Session["username"] = txtusername.Text;
-                Response.Redirect("Login.aspx");
-                Thread.Sleep(3000);
-
+                if (CheckBox1.Checked)
+                {
+                    dong.Close();
+                    string sql_command_update = "INSERT INTO USER (EMAIL,PASSWORD,FULLNAME,BIRTHDAY,GENDER,ADDRESS,PHONENUMBER) VALUES(N'" +
+                        txtEmail.Text + "',N'" + txtPassword.Text + "',N'" + txtFullName.Text + "',N'" + txtBirthday.Text + "',N'"
+                        + txtGender.Text + "',N'" + txtAddress.Text + "',N'" + txtNumberPhone.Text + "')";
+                    SqlCommand lenhthem = new SqlCommand();
+                    lenhthem.Connection = con;
+                    lenhthem.CommandType = System.Data.CommandType.Text;
+                    lenhthem.CommandText = sql_command_update;
+                    lenhthem.ExecuteNonQuery();
+                    //tb.Text = "Sign Up successfully";
+                    Session["Email"] = txtEmail.Text;
+                    Session["Password"] = txtPassword.Text;
+                    Response.Redirect("Login.aspx");
+                    Thread.Sleep(3000);
+                }
+                //tb.Text = "Chưa đồng ý các điều khoản";
             }
         }
     }

@@ -36,32 +36,29 @@
 </head>
 <body >
     <form id="form1" runat="server">
-    <div class="auto-style2">
-        <div class="login" >
-            <div class="card-body">
-                <h2 class="auto-style7"><span class="auto-style6">Đăng nhập</h2>
-                </span><span class="auto-style5">
-                <div class="form-group">
-                    <asp:Label ID="Label1" runat="server" Text="Địa chỉ email"></asp:Label>
-                    <asp:TextBox ID="txtEmail" class="form-control" aria-describedby="emailHelp" placeholder="Email" runat="server"></asp:TextBox>
-                </div>
-                <div class="form-group">
-                    <asp:Label ID="Label2" runat="server" Text="Mật khẩu"></asp:Label>
-                    <asp:TextBox ID="txtBassword" class="form-control" placeholder="Mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
-                </div>
-                <div class="form-check">
-                    <asp:CheckBox ID="CheckBox1" class="form-check-input" runat="server" Text="Nhớ mật khẩu" CssClass="auto-style1" />
-                    </span>
-                </div>
-                <strong>
-                <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" Text="Đăng nhập" Height="58px" Width="160px" CssClass="auto-style3" ForeColor="#666666" OnClick="btnLogin_Click1" />
-                <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" Height="58px" Width="160px" CssClass="auto-style3" ForeColor="#666666" OnClick="btnLogin_Click1" />
+        <div class="auto-style2">
+            <div class="login" >
+                <div class="card-body">
+                    <h2 class="auto-style7">Đăng nhập</h2>
+                    <div class="form-group">
+                        <asp:Label ID="Label1" runat="server" Text="Địa chỉ email"></asp:Label>
+                        <asp:TextBox ID="txtEmail" class="form-control" aria-describedby="emailHelp" placeholder="Email" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label ID="Label2" runat="server" Text="Mật khẩu"></asp:Label>
+                        <asp:TextBox ID="txtBassword" class="form-control" placeholder="Mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
+                    </div>
+                    <div class="form-check">
+                        <asp:CheckBox ID="CheckBox1" class="form-check-input" runat="server" Text="Nhớ mật khẩu" CssClass="auto-style1" />
+                    </div>
+                    <strong>
+                        <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" Text="Đăng nhập" Height="58px" Width="160px" />
+                        <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" Height="58px" Width="160px"/>
                 
-                </strong>
-                
+                    </strong>
+                </div>
             </div>
         </div>
-    </div>
     </form>
 </body>
 </html>

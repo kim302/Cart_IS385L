@@ -44,7 +44,7 @@
                         <asp:Label ID="Label6" runat="server" Text="Giới tính"></asp:Label>
                         <asp:TextBox ID="txtGender" class="form-control" placeholder="Giới tính" runat="server"></asp:TextBox>
                         <asp:Label ID="Label8" runat="server" Text="Số điện thoại"></asp:Label>
-                        <asp:TextBox ID="TextBox1" class="form-control" placeholder="Số điện thoại" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtNumberphone" class="form-control" placeholder="Số điện thoại" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <asp:Label ID="Label7" runat="server" Text="Địa chỉ"></asp:Label>
@@ -52,7 +52,7 @@
                     </div>
                     <strong>
                         <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" Text="Đăng nhập" Height="58px" Width="160px" />
-                        <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" Height="58px" Width="160px" />
+                        <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" Height="58px" Width="160px" OnClick="btnRegister_Click" />
                     </strong>
                 </div>
             </div>

@@ -49,11 +49,11 @@
                         <asp:TextBox ID="txtPassword" class="form-control" placeholder="Mật khẩu" runat="server" TextMode="Password"></asp:TextBox>
                     </div>
                     <div class="form-check">
-                        <asp:CheckBox ID="CheckBox1" class="form-check-input" runat="server" Text="Nhớ mật khẩu" CssClass="auto-style1" />
+                        <asp:CheckBox ID="nhomatkhau" class="form-check-input" runat="server" Text="Nhớ mật khẩu" CssClass="auto-style1" />
                     </div>
                     <strong>
                         <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" Text="Đăng nhập" Height="58px" Width="160px" OnClick="btnLogin_Click2" />
-                        <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" Height="58px" Width="160px"/>
+                        <asp:Button ID="btnRegister" class="btn btn-primary" runat="server" Text="Đăng ký" Height="58px" Width="160px" OnClick="btnRegister_Click"/>
                     </strong>
                 </div>
             </div>

@@ -13,5 +13,10 @@ namespace Cart
         {
 
         }
+
+        protected void txtLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
     }
 }

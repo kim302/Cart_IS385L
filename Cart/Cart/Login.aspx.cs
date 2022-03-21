@@ -13,28 +13,6 @@ namespace Cart
         {
 
         }
-        protected void btnLogin_Click(object sender, EventArgs e)
-        {
-           // Kết nối dữ liệu 
-            string path = Server.MapPath("App_Data/Database1.mdf");
-            SqlConnection ketnoi = new SqlConnection();
-            ketnoi.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename = " + path + " Integrated Security = True";
-            ketnoi.Open(); ;
-            
-
-            
-
-        }
-
-        protected void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnLogin_Click1(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

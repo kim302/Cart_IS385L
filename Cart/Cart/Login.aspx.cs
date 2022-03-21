@@ -25,11 +25,10 @@ namespace Cart
             connect.Open();
 
             Console.WriteLine(connect.State);
-            string sqlconn = "select * from USER where EMAIL =N'" + txtEmail.Text + "'and PASSWORD = N'" + txtPassword.Text + "'";
             SqlCommand lenhxem = new SqlCommand();
             lenhxem.Connection = connect;
             lenhxem.CommandType = System.Data.CommandType.Text;
-            lenhxem.CommandText = sqlconn;
+            lenhxem.CommandText = "select * from USER where EMAIL=N'" + txtEmail.Text + "'and PASSWORD=N'" + txtPassword.Text + "'";
             var dong = lenhxem.ExecuteReader();
             if (dong.HasRows)
             {
@@ -38,6 +37,7 @@ namespace Cart
                     Session["EMAIL"] = txtEmail.Text;
                     Session["PASSWORD"] = txtPassword.Text;
                 }
+                dong.Close();
                 Response.Redirect("TongQuan.aspx");
             }
         }

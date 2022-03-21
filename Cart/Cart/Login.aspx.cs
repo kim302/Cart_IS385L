@@ -13,15 +13,6 @@ namespace Cart
         {
 
         }
-
-        protected void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnLogin_Click1(object sender, EventArgs e)
-        {
-
-        }
     }
+
 }

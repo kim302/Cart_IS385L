@@ -14,9 +14,9 @@ namespace Cart
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void txtLogin_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("login.aspx");
         }
     }
 }

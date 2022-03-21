@@ -106,13 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="App_Data\GioHang.mdf" />
-    <Content Include="App_Data\GioHang_log.ldf">
-      <DependentUpon>GioHang.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\Register.mdf" />
-    <Content Include="App_Data\Register_log.ldf">
-      <DependentUpon>Register.mdf</DependentUpon>
+    <Content Include="App_Data\CART_IS385L.mdf" />
+    <Content Include="App_Data\CART_IS385L_log.ldf">
+      <DependentUpon>CART_IS385L.mdf</DependentUpon>
     </Content>
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
@@ -125,6 +121,7 @@
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\script.js" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -256,6 +253,7 @@
     <Content Include="Images\TiVi\tv8.jpg" />
     <Content Include="Images\TiVi\tv9.jpg" />
     <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -333,6 +331,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

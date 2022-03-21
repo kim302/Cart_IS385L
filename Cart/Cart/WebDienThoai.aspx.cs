@@ -13,7 +13,7 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string path = Server.MapPath("App_Data/DienThoai.mdf");
+            string path = Server.MapPath("App_Data/CART_IS385L.mdf");
             SqlConnection ketnoi = new SqlConnection();
             ketnoi.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True";
             ketnoi.Open();
@@ -21,22 +21,22 @@ namespace Cart
             SqlCommand luugiohang = new SqlCommand();
             luugiohang.CommandType = System.Data.CommandType.Text;
             luugiohang.Connection = ketnoi;
-            string lenhsql = "select * from DSDT";
+            string lenhsql = "select * from DienThoai";
             luugiohang.CommandText = lenhsql;
             SqlDataAdapter adap = new SqlDataAdapter(luugiohang.CommandText, ketnoi);
             DataSet ds = new DataSet();
-            adap.Fill(ds, "DSDT");
-            DataTable tb = ds.Tables["DSDT"];
+            adap.Fill(ds, "DienThoai");
+            DataTable tb = ds.Tables["DienThoai"];
             int dong = tb.Rows.Count;
             for (int i = 0; i < dong; i++)
             {
 
-                string mothea = "<a href=chitietdt.aspx?ma=" + tb.Rows[i]["MaDT"].ToString() + ">";
+                string mothea = "<a href=chitietdt.aspx?ma=" + tb.Rows[i]["Masp"].ToString() + ">";
                 Response.Write(mothea);
                 string theimg = "<img src=" + tb.Rows[i]["HinhAnh"].ToString() + " width=200 height = 200 >" + " <br> "; ;
                 Response.Write(theimg);
-                Response.Write(tb.Rows[i]["TenDT"].ToString() + "<br>");
-                Response.Write("<b>Thông số kỹ thuật:</b><br>" + tb.Rows[i]["ThongTin"].ToString() + "<br>");
+                Response.Write(tb.Rows[i]["Tensp"].ToString() + "<br>");
+                Response.Write("" + tb.Rows[i]["DonGia"].ToString() + "<br>");
                 string dongthea = "</a >";
                 Response.Write(dongthea);
             }

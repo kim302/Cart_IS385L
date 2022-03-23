@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-inline my-2 my-lg-0 pl-5">
                     <i class="fa-regular fa-circle-user fa-2xl"></i>
-                    <asp:Label ID="sessionID" Class="pl-3" runat="server"> Mắc mệt</asp:Label>
+                    <asp:Label ID="user" Class="pl-3" runat="server"></asp:Label>
                 </div>
                 <div class="form-inline my-2 my-lg-0 pl-5">
                     <button type="button" class="btn btn-primary">

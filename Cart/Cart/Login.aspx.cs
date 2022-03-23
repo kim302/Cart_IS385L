@@ -23,8 +23,6 @@ namespace Cart
             connect.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True ";
             connect.Open();
 
-
-
             //Khai thác dữ liệu
             SqlCommand chon1 = new SqlCommand();
             chon1.Connection = connect;
@@ -43,21 +41,47 @@ namespace Cart
                 if (matkhau.HasRows)
                 {
                     matkhau.Close();
-                    Response.Redirect("home.aspx");
+                    var test = chon1.ExecuteReader();
+                    string sess= "Chưa đăng nhập";
+                    if (test.HasRows)
+                    {
+                        user.Close();test.Close();
+                        // Tạo đối tượng SqlCommand
+                        SqlCommand command = new SqlCommand();
+                        command.Connection = connect;
+
+                        // Câu truy vấn lấy danh mục
+                        string queryString = @"SELECT * FROM ACCOUNTS WHERE EMAIL =N'" + txtEmail.Text + "'";
+                        command.CommandText = queryString;
+
+                        // Thi hành truy vấn trả về SqlReader
+                        SqlDataReader reader = command.ExecuteReader();
+                        
+                        // Kiểm tra có kết quả trả về
+                        if (reader.HasRows)
+                        {
+                            // Đọc từng dòng tập kết quả
+                            while (reader.Read())
+                            {
+                                string mota = reader.GetString(2);
+                                sess = mota;
+                            }
+                        }
+                        reader.Close();
+                    }
+                    Session["FullName"] = sess;
+                    Response.Redirect("Home.aspx");
                     Thread.Sleep(3000);
                 }
                 else
                 {
-                    matkhau.Close(); user.Close();
-
+                    matkhau.Close();
                 }
             }
             else
             {
                 user.Close();
-
             }
-
         }
 
         protected void btnRegister_Click1(object sender, EventArgs e)

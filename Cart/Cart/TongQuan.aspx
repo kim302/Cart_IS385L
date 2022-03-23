@@ -69,11 +69,11 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="container-fluid" style="width: 90%; margin-top: 2%">
-            <div class="row">
-                <div class="col-md-2 justify-content-right text-left">
+        <div class="container-fluid" style=" width: 95%; margin-top: 2%">
+
+            <!-- <div class="col-md-2 justify-content-right text-left">
                     <div class="menulist" style="border: 50px">
-                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="background-color: darkblue; border-radius: 5px; position: relative;">
+                        <div class="nav flex-column nav-pills zoom" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="background-color: darkblue; border-radius: 5px; position: relative;">
                             <div class="text-center" style="background-color: red; height: 40px; border-radius: 5px;"><b>Danh mục sản phẩm </b></div>
                             <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Danh Mục</a>
                             <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Laptop</a>
@@ -81,30 +81,40 @@
                             <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Điện thoại</a>
                         </div>
                     </div>
+                </div> -->
+            <div class=" justify-content-right text-left">
+                <div class="row">
+                    <h2>Laptop Deals Sốc Giảm Tới 10.000.000đ</h2>
                 </div>
-                <div class="col-md-10 justify-content-right text-left">
-
-                    <div class="row">
-                        <h2>Deals Sốc Giảm Tới 10.000.000đ</h2>
-                    </div>
-                    <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="4" RepeatDirection="Horizontal" Width="1150px">
-                        <ItemTemplate>
+                <asp:DataList ID="DataList1" BorderRadius="15px" runat="server" BackColor="Cyan" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px">
+                    <ItemTemplate>
                         <div class="card-deck">
-                            <div class="card">
-                                <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="208px" Width="208" ImageUrl='<%# Eval("ANHSP") %>' />
-                                <div class="card-body">
-                                        <asp:Label ID="Label2" runat="server" Text='<%# Eval("TENSP") %>' />
+                            <div class="card zoom">
+                                <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="139px" Width="208px" ImageUrl='<%# Eval("ANHSP") %>' />
+                                <div class="card-body" style="font-size: 11px">
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("TENSP") %>' />
                                     <br />
-                                        <asp:Label ID="Label3" runat="server" Text='<%# Eval("DONGIA") %>' />
+                                    <asp:Label ID="Label3" runat="server" Text='<%# Eval("DONGIA") %>' />
+                                    <br />
+                                    M.HÌNH
+                                    <asp:Label ID="Label6" runat="server" Text='<%# Eval("MANHINH") %>' />
+                                    <br />
+                                    CHIP
+                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("CPU") %>' />
+                                    <br />
+                                    CARD 
+                                    <asp:Label ID="Label4" runat="server" Text='<%# Eval("VGA") %>' />
+                                    <br />
+                                    PIN
+                                    <asp:Label ID="Label5" runat="server" Text='<%# Eval("Pin") %>' />
                                     <br />
                                 </div>
                             </div>
                         </div>
-                            </ItemTemplate>
-                        <SelectedItemStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
-                    </asp:DataList>
-                    <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA] FROM [LapTopsDeals]"></asp:SqlDataSource>
-                </div>
+                    </ItemTemplate>
+                    <SelectedItemStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+                </asp:DataList>
+                <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA], [PIN] FROM [LapTopsDeals]"></asp:SqlDataSource>
             </div>
         </div>
     </form>

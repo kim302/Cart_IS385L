@@ -69,7 +69,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="container-fluid" style=" width: 95%; margin-top: 2%">
+        <div class="container-fluid" style="width: 95%; margin-top: 2%">
 
             <!-- <div class="col-md-2 justify-content-right text-left">
                     <div class="menulist" style="border: 50px">

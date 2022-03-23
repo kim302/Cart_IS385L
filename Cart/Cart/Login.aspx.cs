@@ -12,7 +12,7 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -23,7 +23,7 @@ namespace Cart
             connect.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + ";Integrated Security=True ";
             connect.Open();
 
-            
+
 
             //Khai thác dữ liệu
             SqlCommand chon1 = new SqlCommand();
@@ -43,19 +43,19 @@ namespace Cart
                 if (matkhau.HasRows)
                 {
                     matkhau.Close();
-                    Response.Redirect("TongQuan.aspx");
+                    Response.Redirect("home.aspx");
                     Thread.Sleep(3000);
                 }
                 else
                 {
                     matkhau.Close(); user.Close();
-                    
+
                 }
             }
             else
             {
                 user.Close();
-                
+
             }
 
         }

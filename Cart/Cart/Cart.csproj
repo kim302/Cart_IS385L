@@ -153,6 +153,14 @@
     <Content Include="bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="bootstrap\js\bootstrap.js.map" />
     <Content Include="bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Images\Content\690-300-690x300-15.png" />
+    <Content Include="Images\Content\content1.jpg" />
+    <Content Include="Images\Content\content2.jpg" />
+    <Content Include="Images\Content\content3.jpg" />
+    <Content Include="Images\Content\content4.jpg" />
+    <Content Include="Images\Content\content.jpg" />
+    <Content Include="Images\LapTops\asus-zenbook-ux425ea-i5-1135g7-8gb-512gb.jpg" />
+    <Content Include="Images\logo.png" />
     <Content Include="ThongTinChiTiet.aspx" />
     <Content Include="WebDienThoai.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -188,7 +196,6 @@
     <Content Include="Images\LapTops\apple-macbook-pro-14-m1-pro.jpg" />
     <Content Include="Images\LapTops\apple-macbook-pro-m1-2020.jpg" />
     <Content Include="Images\LapTops\asus-tuf-gaming-fx506lh.jpg" />
-    <Content Include="Images\LapTops\asus-zenbook-ux425ea-i5-1135g7-8gb-512gb-600x600.jpg" />
     <Content Include="Images\LapTops\dell-gaming-alienware-m15-r6-i7-11800h-32gb-1tb-ssd-8gb-600x600.jpg" />
     <Content Include="Images\LapTops\dell-gaming-g15-5511-i7-p105f006bgr-140222-091855-600x600.jpg" />
     <Content Include="Images\LapTops\dell-gaming-g15-5515-r7-5800h-16gb-512gb-4gb-rtx3050ti-600x600.jpg" />

@@ -161,6 +161,7 @@
     <Content Include="Images\Content\content.jpg" />
     <Content Include="Images\LapTops\asus-zenbook-ux425ea-i5-1135g7-8gb-512gb.jpg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\TiVi\tv1.jpg" />
     <Content Include="ThongTinChiTiet.aspx" />
     <Content Include="WebDienThoai.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -227,7 +228,6 @@
     <Content Include="Images\LapTops\Surface-Laptop-Studio-600x600.jpg" />
     <Content Include="Images\LapTops\Surface-Pro-8-Platinum-600x600.jpg" />
     <Content Include="Images\LapTops\thinkbook-14p-g2-ach-r5-.jpg" />
-    <Content Include="Images\TiVi\tv1.jpeg" />
     <Content Include="Images\TiVi\tv10.jpg" />
     <Content Include="Images\TiVi\tv11.jpg" />
     <Content Include="Images\TiVi\tv12.jpg" />

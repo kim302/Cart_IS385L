@@ -13,7 +13,7 @@
 <body>
     <form id="form1" runat="server">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <a class="navbar-brand" href="/tongquan">
                 <img src="Images/logo.png" /></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -33,6 +33,11 @@
                 <div class="form-inline my-2 my-lg-0 pl-5">
                     <i class="fa-regular fa-circle-user fa-2xl"></i>
                     <asp:Label ID="sessionID" Class="pl-3" runat="server"> Mắc mệt</asp:Label>
+                </div>
+                <div class="form-inline my-2 my-lg-0 pl-5">
+                    <button type="button" class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping fa-xl pr-2"></i>
+                        Giỏ Hàng</button>
                 </div>
             </div>
         </nav>
@@ -87,7 +92,7 @@
                 <div class="row">
                     <h2>Laptop Deals Sốc Giảm Tới 10.000.000đ</h2>
                 </div>
-                <asp:DataList ID="DataList1" BorderRadius="15px" runat="server" BackColor="Cyan" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px">
+                <asp:DataList ID="DataList1" BorderRadius="15px" runat="server" BackColor="Cyan" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
                     <ItemTemplate>
                         <div class="card-deck">
                             <div class="card zoom">
@@ -116,6 +121,7 @@
                     <SelectedItemStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
                 </asp:DataList>
                 <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA], [PIN] FROM [LapTopsDeals]"></asp:SqlDataSource>
+                <asp:Label ID="Label1" runat="server" ForeColor="White"></asp:Label>
             </div>
         </div>
     </form>

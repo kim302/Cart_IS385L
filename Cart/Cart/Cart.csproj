@@ -122,6 +122,7 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\script.js" />
+    <Content Include="chitietdt.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -152,13 +153,21 @@
     <Content Include="bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="bootstrap\js\bootstrap.js.map" />
     <Content Include="bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Images\Content\690-300-690x300-15.png" />
+    <Content Include="Images\Content\content1.jpg" />
+    <Content Include="Images\Content\content2.jpg" />
+    <Content Include="Images\Content\content3.jpg" />
+    <Content Include="Images\Content\content4.jpg" />
+    <Content Include="Images\Content\content.jpg" />
+    <Content Include="Images\LapTops\asus-zenbook-ux425ea-i5-1135g7-8gb-512gb.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="ThongTinChiTiet.aspx" />
+    <Content Include="WebDienThoai.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Images\DienThoais\Galaxy-S22-Black-600x600.jpg" />
     <Content Include="Images\DienThoais\Galaxy-S22-Ultra-Burgundy-600x600.jpg" />
     <Content Include="Images\DienThoais\iphone-12-mini-mau-tim-3-600x600.jpg" />
     <Content Include="Images\DienThoais\iphone-12-pro-xam-new-600x600-2-600x600.jpg" />
     <Content Include="Images\DienThoais\iphone-12-xanh-la-new-2-600x600.jpg" />
-    <Content Include="Images\DienThoais\iphone-13-midnight-2-600x600.jpg" />
     <Content Include="Images\DienThoais\iphone-13-mini-128gb-xanh-la-090322-011146-600x600.jpg" />
     <Content Include="Images\DienThoais\iphone-13-mini-blue-2-600x600.jpg" />
     <Content Include="Images\DienThoais\iphone-13-pro-max-gold-1-600x600.jpg" />
@@ -171,11 +180,9 @@
     <Content Include="Images\DienThoais\iphone-xr-128gb-600x600.jpg" />
     <Content Include="Images\DienThoais\oppo-reno4-pro-trang-600x600.jpg" />
     <Content Include="Images\DienThoais\oppo-reno6-5g-black-600x600.jpg" />
-    <Content Include="Images\DienThoais\oppo-reno7-5g-xanh-thumb-600x600.jpg" />
     <Content Include="Images\DienThoais\realme-c21y-blue-600x600.jpg" />
     <Content Include="Images\DienThoais\samsung-galaxy-a52s-5g-mint-600x600.jpg" />
     <Content Include="Images\DienThoais\Samsung-Galaxy-S21-FE-tim-600x600.jpg" />
-    <Content Include="Images\DienThoais\samsung-galaxy-s21-plus-bac-600x600-600x600.jpg" />
     <Content Include="Images\DienThoais\samsung-galaxy-s21-tim-600x600.jpg" />
     <Content Include="Images\DienThoais\samsung-galaxy-s21-ultra-bac-600x600-1-600x600.jpg" />
     <Content Include="Images\DienThoais\samsung-galaxy-z-flip-3-cream-1-600x600.jpg" />
@@ -189,7 +196,6 @@
     <Content Include="Images\LapTops\apple-macbook-pro-14-m1-pro.jpg" />
     <Content Include="Images\LapTops\apple-macbook-pro-m1-2020.jpg" />
     <Content Include="Images\LapTops\asus-tuf-gaming-fx506lh.jpg" />
-    <Content Include="Images\LapTops\asus-zenbook-ux425ea-i5-1135g7-8gb-512gb-600x600.jpg" />
     <Content Include="Images\LapTops\dell-gaming-alienware-m15-r6-i7-11800h-32gb-1tb-ssd-8gb-600x600.jpg" />
     <Content Include="Images\LapTops\dell-gaming-g15-5511-i7-p105f006bgr-140222-091855-600x600.jpg" />
     <Content Include="Images\LapTops\dell-gaming-g15-5515-r7-5800h-16gb-512gb-4gb-rtx3050ti-600x600.jpg" />
@@ -221,7 +227,7 @@
     <Content Include="Images\LapTops\Surface-Laptop-Studio-600x600.jpg" />
     <Content Include="Images\LapTops\Surface-Pro-8-Platinum-600x600.jpg" />
     <Content Include="Images\LapTops\thinkbook-14p-g2-ach-r5-.jpg" />
-    <Content Include="Images\TiVi\tv1.jpg" />
+    <Content Include="Images\TiVi\tv1.jpeg" />
     <Content Include="Images\TiVi\tv10.jpg" />
     <Content Include="Images\TiVi\tv11.jpg" />
     <Content Include="Images\TiVi\tv12.jpg" />
@@ -298,6 +304,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="chitietdt.aspx.cs">
+      <DependentUpon>chitietdt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chitietdt.aspx.designer.cs">
+      <DependentUpon>chitietdt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -351,6 +364,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinChiTiet.aspx.cs">
+      <DependentUpon>ThongTinChiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongTinChiTiet.aspx.designer.cs">
+      <DependentUpon>ThongTinChiTiet.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TongQuan.aspx.cs">
       <DependentUpon>TongQuan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -364,6 +384,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebDienThoai.aspx.cs">
+      <DependentUpon>WebDienThoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebDienThoai.aspx.designer.cs">
+      <DependentUpon>WebDienThoai.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

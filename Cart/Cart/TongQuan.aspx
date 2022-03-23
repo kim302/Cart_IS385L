@@ -82,6 +82,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-10 justify-content-right text-left">
+
+                    <div class="row">
+                        <h2>Deals Sốc Giảm Tới 10.000.000đ</h2>
+                    </div>
+                    <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="4" RepeatDirection="Horizontal" Width="1150px">
+                        <ItemTemplate>
+                        <div class="card-deck">
+                            <div class="card">
+                                <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="208px" Width="208" ImageUrl='<%# Eval("ANHSP") %>' />
+                                <div class="card-body">
+                                        <asp:Label ID="Label2" runat="server" Text='<%# Eval("TENSP") %>' />
+                                    <br />
+                                        <asp:Label ID="Label3" runat="server" Text='<%# Eval("DONGIA") %>' />
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                            </ItemTemplate>
+                        <SelectedItemStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+                    </asp:DataList>
+                    <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA] FROM [LapTopsDeals]"></asp:SqlDataSource>
+                </div>
             </div>
         </div>
     </form>

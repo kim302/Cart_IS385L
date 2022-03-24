@@ -13,5 +13,13 @@ namespace Cart
         {
 
         }
+        protected void SelectedIndex(object source, DataListCommandEventArgs e)
+        {
+
+        }
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

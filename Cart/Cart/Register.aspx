@@ -60,7 +60,7 @@
                                             <div class="form-check d-flex justify-content-center mb-3">
                                                 <asp:CheckBox ID="CheckBox1" class="form-check-input me-2" runat="server" CssClass="auto-style1" />
                                                 <label class="form-check-label" for="form2Example3">
-                                                    Tôi đồng ý tất cả các điều khoản trong <a href="#!">Điều khoản dịch vụ</a>
+                                                    Tôi đồng ý tất cả các điều khoản trong <a href="DieuKhoanDichVu.aspx">Điều khoản dịch vụ</a>
                                                 </label>
                                             </div>
                                             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">

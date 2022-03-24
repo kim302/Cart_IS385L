@@ -131,6 +131,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="CSS\Styles.css" />
     <Content Include="DanhSachLapTops.aspx" />
+    <Content Include="DanhSachDienThoai.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DieuKhoanDichVu.aspx" />
     <Content Include="favicon.ico" />
@@ -162,6 +163,8 @@
     <Content Include="Images\Content\content3.jpg" />
     <Content Include="Images\Content\content4.jpg" />
     <Content Include="Images\Content\content.jpg" />
+    <Content Include="Images\Content\dessss-1200x90.png" />
+    <Content Include="Images\Content\dmxd-1200x90.png" />
     <Content Include="Images\LapTops\acer-nitro-5-gaming-an515-45-r6ev-r5-5600h.jpg" />
     <Content Include="Images\LapTops\acer-nitro-5-gaming-an515-57-54mv-i5-11400h.jpg" />
     <Content Include="Images\LapTops\apple-macbook-pro-14-m1-pro.jpg" />
@@ -174,12 +177,10 @@
     <Content Include="Images\LapTops\dell-gaming-g15-5515-r7-5800h-16gb-512gb-4gb-rtx3050ti-600x600.jpg" />
     <Content Include="Images\LapTops\dell-inspiron-15-3511-i3-1115g4.jpg" />
     <Content Include="Images\LapTops\dell-vostro-3405-r5-3500u-8gb-512gb.jpg" />
-    <Content Include="Images\LapTops\dell-xps-17-9710-i7-xps7i7001w1-1-600x600.jpg" />
     <Content Include="Images\LapTops\gigabyte-gaming-g5-i5-10500h-16gb-512gb-6gb-171121-034937-600x600.jpg" />
     <Content Include="Images\LapTops\hp-240-g8-i3-1005g1-4gb-256gb-win10-519a7pa.jpg" />
     <Content Include="Images\LapTops\hp-envy-x360-convert-13-ay1056au-r7-601q8pa-170322-023537-600x600.jpg" />
     <Content Include="Images\LapTops\hp-gaming-victus-16-d0198tx-i7-4r0u0pa-600x600.jpg" />
-    <Content Include="Images\LapTops\hp-zbook-firefly-14-g8-i7-275w0av-251121-045610-600x600.jpg" />
     <Content Include="Images\LapTops\intel-nuc-m15-i5-bbc510eauxbc1.jpg" />
     <Content Include="Images\LapTops\intel-nuc-m15-i7.jpg" />
     <Content Include="Images\LapTops\lenovo-gaming-legion-5-15ith6-i7.jpg" />
@@ -329,6 +330,13 @@
     </Compile>
     <Compile Include="DanhSachLapTops.aspx.designer.cs">
       <DependentUpon>DanhSachLapTops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachDienThoai.aspx.cs">
+      <DependentUpon>DanhSachDienThoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhSachDienThoai.aspx.designer.cs">
+      <DependentUpon>DanhSachDienThoai.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

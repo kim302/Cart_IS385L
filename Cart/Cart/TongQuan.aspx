@@ -12,7 +12,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/tongquan">
                 <img src="Images/logo.png" /></a>
@@ -21,9 +20,9 @@
                 <div class="dropdown pmd-dropdown pl-5">
                     <button class="btn pmd-ripple-effect btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Danh mục sản phẩm</button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="/DanhSachTivi.aspx">TiVi</a>
+                        <a class="dropdown-item" href="/DanhSachDienThoai.aspx">Điện thoạt</a>
+                        <a class="dropdown-item" href="/DanhSachLaptop.aspx">lapTop</a>
                     </div>
                 </div>
                 <div class="form-inline my-2 my-lg-0 pl-3">

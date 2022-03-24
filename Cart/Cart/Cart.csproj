@@ -131,7 +131,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="CSS\Styles.css" />
     <Content Include="DanhSachLapTops.aspx" />
+    <Content Include="DanhSachDienThoai.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DieuKhoanDichVu.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GioHang.aspx" />
@@ -161,6 +163,8 @@
     <Content Include="Images\Content\content3.jpg" />
     <Content Include="Images\Content\content4.jpg" />
     <Content Include="Images\Content\content.jpg" />
+    <Content Include="Images\Content\dessss-1200x90.png" />
+    <Content Include="Images\Content\dmxd-1200x90.png" />
     <Content Include="Images\LapTops\acer-nitro-5-gaming-an515-45-r6ev-r5-5600h.jpg" />
     <Content Include="Images\LapTops\acer-nitro-5-gaming-an515-57-54mv-i5-11400h.jpg" />
     <Content Include="Images\LapTops\apple-macbook-pro-14-m1-pro.jpg" />
@@ -327,12 +331,26 @@
     <Compile Include="DanhSachLapTops.aspx.designer.cs">
       <DependentUpon>DanhSachLapTops.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DanhSachDienThoai.aspx.cs">
+      <DependentUpon>DanhSachDienThoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhSachDienThoai.aspx.designer.cs">
+      <DependentUpon>DanhSachDienThoai.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DieuKhoanDichVu.aspx.cs">
+      <DependentUpon>DieuKhoanDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DieuKhoanDichVu.aspx.designer.cs">
+      <DependentUpon>DieuKhoanDichVu.aspx</DependentUpon>
     </Compile>
     <Compile Include="GioHang.aspx.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>

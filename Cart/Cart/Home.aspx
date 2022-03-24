@@ -21,9 +21,9 @@
                 <div class="dropdown pmd-dropdown pl-5">
                     <button class="btn pmd-ripple-effect btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Danh mục sản phẩm</button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="/DanhSachTivi.aspx">TiVi</a>
+                        <a class="dropdown-item" href="/DanhSachDienThoai.aspx">Điện thoạt</a>
+                        <a class="dropdown-item" href="/DanhSachLaptop.aspx">lapTop</a>
                     </div>
                 </div>
                 <div class="form-inline my-2 my-lg-0 pl-3">
@@ -122,6 +122,28 @@
                 </asp:DataList>
                 <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA], [PIN] FROM [LapTopsDeals]"></asp:SqlDataSource>
                 <asp:Label ID="Label1" runat="server" ForeColor="White"></asp:Label>
+            </div>
+            <div class=" justify-content-right text-left">
+                <div class="contents pt-5">
+                    <img src="Images/Content/dessss-1200x90.png" style="width: 1336px; height: 100px" />
+                </div>
+                <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource1" BorderRadius="15px" BackColor="#FFBF00" BorderColor="#FFBF00" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px">
+                    <ItemTemplate>
+                        <div class="card-deck">
+                            <div class="card zoom" style="height: 300px">
+                                <div class="imgs pt-3">
+                                    <asp:ImageButton ID="ImageButton2" runat="server" CommandName="redirect" Height="208px" Width="208px" ImageUrl='<%# Eval("HINHANH") %>' />
+                                </div>
+                            <div class="card-body" style="font-size: 11px">
+                                <asp:Label ID="TENSPLabel" runat="server" Text='<%# Eval("TENSP") %>' />
+                                <br />
+                                <asp:Label ID="DONGIALabel" runat="server" Text='<%# Eval("DONGIA")  %>' />
+                            </div>
+                        </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [HINHANH], [DONGIA] FROM [DienThoai] WHERE [DEALS] = 'DEALS'"></asp:SqlDataSource>
             </div>
         </div>
     </form>

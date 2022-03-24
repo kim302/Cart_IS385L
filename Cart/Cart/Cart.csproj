@@ -132,6 +132,7 @@
     <Content Include="CSS\Styles.css" />
     <Content Include="DanhSachLapTops.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DieuKhoanDichVu.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GioHang.aspx" />
@@ -335,6 +336,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DieuKhoanDichVu.aspx.cs">
+      <DependentUpon>DieuKhoanDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DieuKhoanDichVu.aspx.designer.cs">
+      <DependentUpon>DieuKhoanDichVu.aspx</DependentUpon>
     </Compile>
     <Compile Include="GioHang.aspx.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>

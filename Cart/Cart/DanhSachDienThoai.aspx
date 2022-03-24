@@ -52,10 +52,9 @@
                                         <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="208px" Width="208px" ImageUrl='<%# Eval("HinhAnh") %>' />
                                     </div>
                                     <div class="card-body" style="font-size: 11px">
-                                        Tensp:
-                                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
+                                        <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
                                         <br />
-                                        DonGia:
+                                        Giá:
                                             <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DonGia") %>' />
                                     </div>
                                 </div>
@@ -64,6 +63,58 @@
                     </asp:DataList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Tensp], [HinhAnh], [DonGia] FROM [DienThoai] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
                     <asp:Label ID="Label1" runat="server" ForeColor="White"></asp:Label>
+                </div>
+            </div>
+            <div class=" justify-content-right text-left">
+                <div class="contents pt-3">
+                    <div class="contents pt-0-5">
+                        <h2 class="pt-3">ĐIỆN THOẠI NỔI BẬT NHẤT</h2>
+                    </div>
+                    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource2" BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
+                        <ItemTemplate>
+                            <div class="card-deck">
+                                <div class="card zoom" style="height: 300px">
+                                    <div class="imgs pt-3">
+                                        <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="208px" Width="208px" ImageUrl='<%# Eval("HinhAnh") %>' />
+                                    </div>
+                                    <div class="card-body" style="font-size: 11px">
+                                        <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
+                                        <br />
+                                        Giá:
+                                            <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DonGia") %>' />
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Tensp], [HinhAnh], [DonGia] FROM [DienThoai] WHERE NOIBAT = 'Noibat'"></asp:SqlDataSource>
+                    <asp:Label ID="Label2" runat="server" ForeColor="White"></asp:Label>
+                </div>
+            </div>
+            <div class=" justify-content-right text-left">
+                <div class="contents pt-3">
+                    <div class="contents pt-0-5">
+                        <h2 class="pt-3">TẤT CẢ SẢN PHẨM</h2>
+                    </div>
+                    <asp:DataList ID="DataList3" runat="server" DataSourceID="SqlDataSource3" BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
+                        <ItemTemplate>
+                            <div class="card-deck">
+                                <div class="card zoom" style="height: 300px">
+                                    <div class="imgs pt-3">
+                                        <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="208px" Width="208px" ImageUrl='<%# Eval("HinhAnh") %>' />
+                                    </div>
+                                    <div class="card-body" style="font-size: 11px">
+                                        <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
+                                        <br />
+                                        Giá:
+                                            <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DonGia") %>' />
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Tensp], [HinhAnh], [DonGia] FROM [DienThoai]"></asp:SqlDataSource>
+                    <asp:Label ID="Label3" runat="server" ForeColor="White"></asp:Label>
                 </div>
             </div>
         </div>

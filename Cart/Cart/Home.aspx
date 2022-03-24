@@ -14,16 +14,16 @@
     <form id="form1" runat="server">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <a class="navbar-brand" href="/tongquan">
+            <a class="navbar-brand pl-3" href="/tongquan">
                 <img src="Images/logo.png" /></a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
                 <!-- Propeller Dropdown -->
-                <div class="dropdown pmd-dropdown pl-5">
+                <div class="dropdown pmd-dropdown ">
                     <button class="btn pmd-ripple-effect btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Danh mục sản phẩm</button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/DanhSachTivi.aspx">TiVi</a>
+                        <a class="dropdown-item" href="/DanhsachTivi.aspx">TiVi</a>
                         <a class="dropdown-item" href="/DanhSachDienThoai.aspx">Điện thoạt</a>
-                        <a class="dropdown-item" href="/DanhSachLaptop.aspx">lapTop</a>
+                        <a class="dropdown-item" href="/DanhSachLaptops.aspx">lapTop</a>
                     </div>
                 </div>
                 <div class="form-inline my-2 my-lg-0 pl-3">
@@ -35,9 +35,11 @@
                     <asp:Label ID="user" Class="pl-3" runat="server"></asp:Label>
                 </div>
                 <div class="form-inline my-2 my-lg-0 pl-5">
-                    <button type="button" class="btn btn-primary">
-                        <i class="fa-solid fa-cart-shopping fa-xl pr-2"></i>
-                        Giỏ Hàng</button>
+                    <a href="/GioHang.aspx">
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-cart-shopping fa-xl pr-2"></i>
+                            Giỏ hàng</button>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -181,9 +183,10 @@
                     </div>
                 </div>
             </div>
-            <script src="bootstrap/jquery-3.6.0.min.js"></script>
-            <script src="bootstrap/js/bootstrap.js"></script>
-            <script src="https://kit.fontawesome.com/45128a02cf.js" crossorigin="anonymous"></script>
+        </div>
+        <script src="bootstrap/jquery-3.6.0.min.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script src="https://kit.fontawesome.com/45128a02cf.js" crossorigin="anonymous"></script>
     </form>
 </body>
 </html>

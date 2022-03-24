@@ -206,7 +206,7 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\TiVi\tv1.jpg" />
     <Content Include="ThongTinChiTiet.aspx" />
-    <Content Include="WebDienThoai.aspx" />
+    <Content Include="DanhsachTivi.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Images\DienThoais\Galaxy-S22-Ultra-Burgundy-600x600.jpg" />
     <Content Include="Images\DienThoais\iphone-12-mini-mau-tim-3-600x600.jpg" />
@@ -420,12 +420,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WebDienThoai.aspx.cs">
-      <DependentUpon>WebDienThoai.aspx</DependentUpon>
+    <Compile Include="DanhsachTivi.aspx.cs">
+      <DependentUpon>DanhsachTivi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebDienThoai.aspx.designer.cs">
-      <DependentUpon>WebDienThoai.aspx</DependentUpon>
+    <Compile Include="DanhsachTivi.aspx.designer.cs">
+      <DependentUpon>DanhsachTivi.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

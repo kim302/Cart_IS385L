@@ -140,10 +140,10 @@
                                         </div>
                                         <div class="card-body" style="font-size: 11px">
                                             Tensp:
-                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
+                                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
                                             <br />
                                             DonGia:
-                            <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DonGia") %>' />
+                                            <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DonGia") %>' />
                                         </div>
                                     </div>
                                 </div>
@@ -152,10 +152,38 @@
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Tensp], [HinhAnh], [DonGia] FROM [DienThoai] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
                     </div>
                 </div>
+                <div class=" justify-content-right text-left">
+                    <div class="contents pt-5">
+                        <div class="contents pt-0-5">
+                            <img src="Images/Content/dmxd-1200x90.png" style="width: 1336px; height: 100px" />
+                        </div>
+                        <asp:DataList ID="DataList3" runat="server" DataSourceID="SqlDataSource2" BorderRadius="15px" BackColor="#EB018A" BorderColor="#EB018A" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
+                            <ItemTemplate>
+                                <div class="card-deck">
+                                    <div class="card zoom" style="height: 300px">
+                                        <div class="imgs pt-3">
+                                            <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="130px" Width="208px" ImageUrl='<%# Eval("HinhAnh") %>' />
+                                        </div>
+                                        <div class="card-body" style="font-size: 11px">
+                                            Tensp:
+                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
+                                            <br />
+                                            Dongia:
+                            <asp:Label ID="DongiaLabel" runat="server" Text='<%# Eval("Dongia") %>' />
+                                            <br />
+                                            Kichthuoc:
+                            <asp:Label ID="KichthuocLabel" runat="server" Text='<%# Eval("Kichthuoc") %>' />
+                                            <br />
+                                        </div>
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Tensp], [Dongia], [Kichthuoc], [HinhAnh] FROM [TiVi] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
+                    </div>
+                </div>
             </div>
-        <script src="bootstrap/jquery-3.6.0.min.js"></script>
-        <script src="bootstrap/js/bootstrap.js"></script>
-        <script src="https://kit.fontawesome.com/45128a02cf.js" crossorigin="anonymous"></script>
+            <script src="bootstrap/jquery-3.6.0.min.js"></script>
+            <script src="bootstrap/js/bootstrap.js"></script>
+            <script src="https://kit.fontawesome.com/45128a02cf.js" crossorigin="anonymous"></script>
     </form>
 </body>
 </html>

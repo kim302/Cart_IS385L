@@ -56,7 +56,7 @@
                     <div class="contents pt-0-5">
                         <img src="Images/Content/Taglinedealsoc-1920x144-1.png" style="width: 1336px; height: 100px" />
                     </div>
-                    <asp:DataList ID="DataList1" BorderRadius="15px" runat="server" BackColor="#023f88" BorderColor="#023f88" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
+                    <asp:DataList ID="DataList1" BorderRadius="15px" runat="server" BackColor="#023f88" BorderColor="#023f88" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex1" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
                         <ItemTemplate>
                             <div class="card-deck">
                                 <div class="card zoom" style="height: 300px">
@@ -86,8 +86,33 @@
                         </ItemTemplate>
                         <SelectedItemStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
                     </asp:DataList>
-                    <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA], [PIN] FROM [LapTopsDeals]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA], [PIN] FROM [LapTops] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
                     <asp:Label ID="Label1" runat="server" ForeColor="White"></asp:Label>
+                </div>
+                <div class=" justify-content-right text-left">
+                    <div class="contents pt-3">
+                        <div class="contents pt-0-5">
+                            <h2 class="pt-3">LAPTOP NỔI BẬT NHẤT</h2>
+                        </div>
+                        <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2" DataKeyField="Masp" BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex2" OnSelectedIndexChanged="DataList2_SelectedIndexChanged">
+                            <ItemTemplate>
+                                <div class="card-deck">
+                                    <div class="card zoom" style="height: 300px">
+                                        <div class="imgs pt-3">
+                                            <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="139px" Width="208px" ImageUrl='<%# Eval("ANHSP") %>' />
+                                        </div>
+                                        <div class="card-body" style="font-size: 11px">
+                                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("TENSP") %>' />
+                                            <br />
+                                            Giá:
+                                            <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DONGIA") %>' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [MASP], [TENSP], [ANHSP], [DONGIA] FROM [Laptops] WHERE NOIBAT='NOIBAT'"></asp:SqlDataSource>
+                    </div>
                 </div>
             </div>
     </form>

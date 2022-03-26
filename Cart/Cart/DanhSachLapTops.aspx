@@ -109,6 +109,33 @@
                             </ItemTemplate>
                         </asp:DataList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [MASP], [TENSP], [ANHSP], [DONGIA] FROM [Laptops] WHERE NOIBAT='NOIBAT'"></asp:SqlDataSource>
+                        <asp:Label ID="Label5" runat="server" ForeColor="White"></asp:Label>
+                    </div>
+                </div>
+                <div class=" justify-content-right text-left">
+                    <div class="contents pt-4">
+                        <div class="contents pt-0-5">
+                            <h2 class="pt-3">TẤT CẢ SẢN PHẨM</h2>
+                        </div>
+                        <asp:DataList ID="DataList3" runat="server" DataKeyField="MASP" DataSourceID="SqlDataSource1"  BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex3" OnSelectedIndexChanged="DataList3_SelectedIndexChanged">
+                            <ItemTemplate>
+                                <div class="card-deck">
+                                    <div class="card zoom" style="height: 300px">
+                                        <div class="imgs pt-3">
+                                            <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="139px" Width="208px" ImageUrl='<%# Eval("ANHSP") %>' />
+                                        </div>
+                                        <div class="card-body" style="font-size: 11px">
+                                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("TENSP") %>' />
+                                            <br />
+                                            Giá:
+                                            <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DONGIA") %>' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [MASP], [TENSP], [ANHSP], [DONGIA] FROM [Laptops]"></asp:SqlDataSource>
+                        <asp:Label ID="Label7" runat="server" ForeColor="White"></asp:Label>
                     </div>
                 </div>
             </div>

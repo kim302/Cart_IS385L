@@ -112,7 +112,6 @@
                     </asp:SqlDataSource>
                 </div>
             </div>
-<<<<<<< HEAD
             <div class=" justify-content-right text-left">
                 <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1" RepeatDirection="Horizontal">
                     <ItemTemplate>
@@ -150,13 +149,54 @@
                 </asp:DataList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [Dongia], [Loaisp], [Hedieuhanh], [Kichthuoc], [Hang], [HinhAnh] FROM [TiVi] WHERE ([Masp] = @Masp)">
                     <SelectParameters>
-                            <asp:ControlParameter ControlID="Label1" Name="Masp" PropertyName="Text" Type="String" />
+                        <asp:ControlParameter ControlID="Label1" Name="Masp" PropertyName="Text" Type="String" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </div>
-=======
->>>>>>> parent of 44fcd5e (Update ba chấm)
-        </div>
+            <div class=" justify-content-right text-left">
+                <asp:DataList ID="DataList3" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1" RepeatDirection="Horizontal">
+                    <ItemTemplate>
+                        <div class="card mb-3 pl-5" style="max-width: 840px; max-height: 1000px">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <asp:Image ID="Image1" class="img-fluid rounded-start" runat="server" Height="335px" ImageUrl='<%# Eval("ANHSP") %>' Width="335px" /><br />
+                                </div>
+                                <div class="row g-0">
+                                    <div class="card-body">
+                                        <h2>
+                                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("TENSP") %>' />
+                                        </h2>
+                                        <br />
+                                        Giá:
+                                        <asp:Label ID="DongiaLabel" runat="server" Text='<%# Eval("DONGIA") %>' />
+                                        <br />
+                                        Màn hình:
+                                        <asp:Label ID="LoaispLabel" runat="server" Text='<%# Eval("MANHINH") %>' />
+                                        <br />
+                                        CPU:
+                                        <asp:Label ID="HedieuhanhLabel" runat="server" Text='<%# Eval("CPU") %>' />
+                                        <br />
+                                        RAM:
+                                        <asp:Label ID="KichthuocLabel" runat="server" Text='<%# Eval("RAM") %>' />
+                                        <br />
+                                        Ổ cứng:
+                                        <asp:Label ID="HangLabel" runat="server" Text='<%# Eval("OCUNG") %>' />
+                                        <br />
+                                        Card đồ hoạ:
+                                        <asp:Label ID="Label13" runat="server" Text='<%# Eval("VGA") %>' />
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [MASP], [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [RAM], [OCUNG], [VGA] FROM [LapTops] WHERE ([MASP] = @MASP)">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="Label1" Name="MASP" PropertyName="Text" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+            </div>
         </div>
         <!-- Footer -->
         <div class="pt-5">

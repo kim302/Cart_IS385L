@@ -148,7 +148,11 @@
                         </div>
                     </ItemTemplate>
                 </asp:DataList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [Dongia], [Loaisp], [Hedieuhanh], [Kichthuoc], [Hang], [HinhAnh] FROM [TiVi] WHERE ([Masp] = @Masp)"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [Dongia], [Loaisp], [Hedieuhanh], [Kichthuoc], [Hang], [HinhAnh] FROM [TiVi] WHERE ([Masp] = @Masp)">
+                    <SelectParameters>
+                            <asp:ControlParameter ControlID="Label1" Name="Masp" PropertyName="Text" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
             </div>
 =======
 >>>>>>> parent of 44fcd5e (Update ba chấm)

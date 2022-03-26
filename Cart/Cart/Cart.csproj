@@ -299,7 +299,6 @@
     <Content Include="Images\LapTops\lenovo-ideapad-3-15iml05-i3-10110u.jpg" />
     <Content Include="Images\LapTops\lenovo-yoga-9-14itl5-i7-82bg006evn-21-600x600.jpg" />
     <Content Include="Images\LapTops\lenovo-yoga-duet-7-13itl6-i5-82ma000pvn.jpg" />
-    <Content Include="Images\LapTops\lenovo-yoga-slim-7-14itl05-i7-1165g7.jpg" />
     <Content Include="Images\LapTops\lg-gram-16-i7-16z90pgah73a5-600x600.jpg" />
     <Content Include="Images\LapTops\macbook-air-m1-2020-gray-600x600.jpg" />
     <Content Include="Images\LapTops\macbook-air-m1-2020.jpg" />
@@ -308,10 +307,7 @@
     <Content Include="Images\LapTops\msi-creator-z16p-b12ugst-i7-12700h-32gb-2tb-ssd-8gb-rtx3070ti-max-q-600x600.jpg" />
     <Content Include="Images\LapTops\msi-gaming-ge66-raider-11uh-i7-259vn-600x600.jpg" />
     <Content Include="Images\LapTops\msi-gaming-gf63-thin-11uc-i5-11400h.jpg" />
-    <Content Include="Images\LapTops\msi-gaming-gs66-stealth-11ug-i7-219vn-600x600.jpg" />
     <Content Include="Images\LapTops\msi-gaming-pulse-gl66-11udk-i7-816vn-051121-023122-600x600.jpg" />
-    <Content Include="Images\LapTops\msi-gaming-stealth-15m-a11uek-i7-254vn-600x600.jpg" />
-    <Content Include="Images\LapTops\Surface-Laptop-Studio-600x600.jpg" />
     <Content Include="Images\LapTops\Surface-Pro-8-Platinum-600x600.jpg" />
     <Content Include="Images\LapTops\thinkbook-14p-g2-ach-r5-.jpg" />
     <Content Include="Images\logo.png" />

@@ -112,7 +112,7 @@
                     </asp:SqlDataSource>
                 </div>
             </div>
-<<<<<<< HEAD
+            <<<<<<< HEAD
             <div class=" justify-content-right text-left">
                 <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1" RepeatDirection="Horizontal">
                     <ItemTemplate>
@@ -150,7 +150,7 @@
                 </asp:DataList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [Dongia], [Loaisp], [Hedieuhanh], [Kichthuoc], [Hang], [HinhAnh] FROM [TiVi] WHERE ([Masp] = @Masp)"></asp:SqlDataSource>
             </div>
-=======
+            =======
 >>>>>>> parent of 44fcd5e (Update ba chấm)
         </div>
         </div>

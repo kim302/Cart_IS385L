@@ -12,7 +12,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <a class="navbar-brand pl-3" href="/tongquan">
                 <img src="Images/logo.png" /></a>

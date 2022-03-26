@@ -59,7 +59,7 @@
                     <asp:DataList ID="DataList1" BorderRadius="15px" runat="server" BackColor="#023f88" BorderColor="#023f88" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex1" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
                         <ItemTemplate>
                             <div class="card-deck">
-                                <div class="card zoom" style="height: 300px">
+                                <div class="card zoom" style="height: 350px">
                                     <div class="imgs pt-3">
                                         <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="139px" Width="208px" ImageUrl='<%# Eval("ANHSP") %>' />
                                     </div>
@@ -77,16 +77,14 @@
                                         CARD 
                                     <asp:Label ID="Label4" runat="server" Text='<%# Eval("VGA") %>' />
                                         <br />
-                                        PIN
-                                    <asp:Label ID="Label5" runat="server" Text='<%# Eval("Pin") %>' />
-                                        <br />
+
                                     </div>
                                 </div>
                             </div>
                         </ItemTemplate>
                         <SelectedItemStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
                     </asp:DataList>
-                    <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA], [PIN] FROM [LapTops] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA] FROM [LapTops] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
                     <asp:Label ID="Label1" runat="server" ForeColor="White"></asp:Label>
                 </div>
                 <div class=" justify-content-right text-left">
@@ -113,6 +111,34 @@
                         </asp:DataList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [MASP], [TENSP], [ANHSP], [DONGIA] FROM [Laptops] WHERE NOIBAT='NOIBAT'"></asp:SqlDataSource>
                     </div>
+                </div>
+                <div class="contents pt-3">
+                    <div class="contents pt-0-5">
+                        <h2 class="pt-3">LAPTOP NỔI BẬT NHẤT</h2>
+                    </div>
+                    <asp:DataList ID="DataList3" runat="server" DataKeyField="MASP" DataSourceID="SqlDataSource4" BorderRadius="15px" BackColor="White" BorderColor="White" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px">
+                        <ItemTemplate>
+                            <div class="card-deck">
+                                <div class="card zoom" style="height: 350px">
+                                    <div class="imgs pt-3">
+                                        <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="139px" Width="208px" ImageUrl='<%# Eval("ANHSP") %>' />
+                                    </div>
+                                    <div class="card-body" style="font-size: 11px">
+                                        <asp:Label ID="TENSPLabel" runat="server" Text='<%# Eval("TENSP") %>' />
+                                        <br />
+                                        Giá:
+                                        <asp:Label ID="DONGIALabel" runat="server" Text='<%# Eval("DONGIA") %>' />
+                                        <br />
+                                        CPU: 
+                                        <asp:Label ID="CPULabel" runat="server" Text='<%# Eval("CPU") %>' />
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [MASP], [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [RAM], [OCUNG], [VGA] FROM [LapTops]"></asp:SqlDataSource>
+
                 </div>
             </div>
     </form>

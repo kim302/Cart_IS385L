@@ -76,33 +76,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--<div class="row">
-                                <div class="imagess col-md-6">
-                                    <asp:Image ID="Image2" runat="server" Height="335px" ImageUrl='<%# Eval("HinhAnh") %>' Width="335px" /><br />
-                                </div>
-                                <div class="infor col-md-6">
-                                    <h2>
-                                        <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' /><br />
-                                    </h2>
-                                    Giá: 
-                        <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DonGia") %>' /><br />
-                                    Màn hình: 
-                        <asp:Label ID="ManHinhLabel" runat="server" Text='<%# Eval("ManHinh") %>' /><br />
-                                    Cam sau: 
-                        <asp:Label ID="CamSauLabel" runat="server" Text='<%# Eval("CamSau") %>' /><br />
-                                    Cam trước: 
-                        <asp:Label ID="CamTruocLabel" runat="server" Text='<%# Eval("CamTruoc") %>' /><br />
-                                    CPU:
-                        <asp:Label ID="CPULabel" runat="server" Text='<%# Eval("CPU") %>' /><br />
-                                    Ram/Rom: 
-                        <asp:Label ID="RamLabel" runat="server" Text='<%# Eval("Ram") %>' />/
-                        <asp:Label ID="ROMLabel" runat="server" Text='<%# Eval("ROM") %>' /><br />
-                                    Sim: 
-                        <asp:Label ID="SimLabel" runat="server" Text='<%# Eval("Sim") %>' /><br />
-                                    Pin: 
-                        <asp:Label ID="PinLabel" runat="server" Text='<%# Eval("Pin") %>' /><br />
-                                </div>
-                            </div> -->
                         </ItemTemplate>
                     </asp:DataList>
                     <asp:SqlDataSource ID="QUERY_SELECT" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [HinhAnh], [DonGia], [ManHinh], [CamSau], [CamTruoc], [CPU], [Ram], [ROM], [Sim], [Pin] FROM [DienThoai] WHERE ([Masp] = @Masp)">
@@ -111,6 +84,43 @@
                         </SelectParameters>
                     </asp:SqlDataSource>
                 </div>
+            </div>
+            <div class=" justify-content-right text-left">
+                <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1" RepeatDirection="Horizontal">
+                    <ItemTemplate>
+                        <div class="card mb-3 pl-5" style="max-width: 840px; max-height: 1000px">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <asp:Image ID="Image1" class="img-fluid rounded-start" runat="server" Height="335px" ImageUrl='<%# Eval("HinhAnh") %>' Width="335px" /><br />
+                                </div>
+                                <div class="row g-0">
+                                    <div class="card-body">
+                                        <h2>
+                                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
+                                        </h2>
+                                        <br />
+                                        Giá:
+                                        <asp:Label ID="DongiaLabel" runat="server" Text='<%# Eval("Dongia") %>' />
+                                        <br />
+                                        Loại sản phẩm:
+                                        <asp:Label ID="LoaispLabel" runat="server" Text='<%# Eval("Loaisp") %>' />
+                                        <br />
+                                        Hệ điều hành:
+                                        <asp:Label ID="HedieuhanhLabel" runat="server" Text='<%# Eval("Hedieuhanh") %>' />
+                                        <br />
+                                        Kích thước:
+                                        <asp:Label ID="KichthuocLabel" runat="server" Text='<%# Eval("Kichthuoc") %>' />
+                                        <br />
+                                        Hãng:
+                                        <asp:Label ID="HangLabel" runat="server" Text='<%# Eval("Hang") %>' />
+                                        <br />
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [Dongia], [Loaisp], [Hedieuhanh], [Kichthuoc], [Hang], [HinhAnh] FROM [TiVi] WHERE ([Masp] = @Masp)"></asp:SqlDataSource>
             </div>
         </div>
     </form>

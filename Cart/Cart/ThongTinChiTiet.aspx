@@ -76,6 +76,33 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--<div class="row">
+                                <div class="imagess col-md-6">
+                                    <asp:Image ID="Image2" runat="server" Height="335px" ImageUrl='<%# Eval("HinhAnh") %>' Width="335px" /><br />
+                                </div>
+                                <div class="infor col-md-6">
+                                    <h2>
+                                        <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' /><br />
+                                    </h2>
+                                    Giá: 
+                        <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DonGia") %>' /><br />
+                                    Màn hình: 
+                        <asp:Label ID="ManHinhLabel" runat="server" Text='<%# Eval("ManHinh") %>' /><br />
+                                    Cam sau: 
+                        <asp:Label ID="CamSauLabel" runat="server" Text='<%# Eval("CamSau") %>' /><br />
+                                    Cam trước: 
+                        <asp:Label ID="CamTruocLabel" runat="server" Text='<%# Eval("CamTruoc") %>' /><br />
+                                    CPU:
+                        <asp:Label ID="CPULabel" runat="server" Text='<%# Eval("CPU") %>' /><br />
+                                    Ram/Rom: 
+                        <asp:Label ID="RamLabel" runat="server" Text='<%# Eval("Ram") %>' />/
+                        <asp:Label ID="ROMLabel" runat="server" Text='<%# Eval("ROM") %>' /><br />
+                                    Sim: 
+                        <asp:Label ID="SimLabel" runat="server" Text='<%# Eval("Sim") %>' /><br />
+                                    Pin: 
+                        <asp:Label ID="PinLabel" runat="server" Text='<%# Eval("Pin") %>' /><br />
+                                </div>
+                            </div> -->
                         </ItemTemplate>
                     </asp:DataList>
                     <asp:SqlDataSource ID="QUERY_SELECT" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [HinhAnh], [DonGia], [ManHinh], [CamSau], [CamTruoc], [CPU], [Ram], [ROM], [Sim], [Pin] FROM [DienThoai] WHERE ([Masp] = @Masp)">
@@ -85,6 +112,7 @@
                     </asp:SqlDataSource>
                 </div>
             </div>
+<<<<<<< HEAD
             <div class=" justify-content-right text-left">
                 <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1" RepeatDirection="Horizontal">
                     <ItemTemplate>
@@ -122,6 +150,8 @@
                 </asp:DataList>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [Dongia], [Loaisp], [Hedieuhanh], [Kichthuoc], [Hang], [HinhAnh] FROM [TiVi] WHERE ([Masp] = @Masp)"></asp:SqlDataSource>
             </div>
+=======
+>>>>>>> parent of 44fcd5e (Update ba chấm)
         </div>
         </div>
         <!-- Footer -->

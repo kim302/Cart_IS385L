@@ -112,7 +112,7 @@
                     </asp:SqlDataSource>
                 </div>
             </div>
-<<<<<<< HEAD
+            <<<<<<< HEAD
             <div class=" justify-content-right text-left">
                 <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1" RepeatDirection="Horizontal">
                     <ItemTemplate>
@@ -154,7 +154,7 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
             </div>
-=======
+            =======
 >>>>>>> parent of 44fcd5e (Update ba chấm)
         </div>
         </div>

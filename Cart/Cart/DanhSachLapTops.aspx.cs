@@ -13,5 +13,45 @@ namespace Cart
         {
 
         }
+        protected void SelectedIndex1(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "redirect")
+            {
+                Label1.Text = DataList1.DataKeys[e.Item.ItemIndex].ToString();
+                Session["ID"] = Label1.Text;
+                Response.Redirect("ThongTinChiTiet.aspx");
+            }
+        }
+        protected void SelectedIndex2(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "redirect")
+            {
+                Label1.Text = DataList2.DataKeys[e.Item.ItemIndex].ToString();
+                Session["ID"] = Label1.Text;
+                Response.Redirect("ThongTinChiTiet.aspx");
+            }
+        }
+        protected void SelectedIndex3(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "redirect")
+            {
+                Label1.Text = DataList3.DataKeys[e.Item.ItemIndex].ToString();
+                Session["ID"] = Label1.Text;
+                Response.Redirect("ThongTinChiTiet.aspx");
+            }
+        }
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        protected void DataList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DataList3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

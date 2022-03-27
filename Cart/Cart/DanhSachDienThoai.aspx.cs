@@ -44,5 +44,11 @@ namespace Cart
         {
 
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            Session["FIND"] = txtSearch.Text;
+            Response.Redirect("TimKiem.aspx");
+        }
     }
 }

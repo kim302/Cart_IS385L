@@ -89,7 +89,7 @@
                     <div class="contents pt-0-5">
                         <img src="Images/Content/Taglinedealsoc-1920x144-1.png" style="width: 1349.55px; height: 102px" />
                     </div>
-                    <asp:DataList ID="DataList1" BorderRadius="15px" runat="server" BackColor="#023f88" BorderColor="#023f88" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px">
+                    <asp:DataList ID="DataList1" BorderRadius="15px" DataKeyField="MASP" runat="server" BackColor="#023f88" BorderColor="#023f88" BorderWidth="2px" CellPadding="6" CellSpacing="6" DataSourceID="PRODUCTS" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex1" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
                         <ItemTemplate>
                             <div class="card-deck">
                                 <div class="card zoom" style="height: 350px">
@@ -117,7 +117,7 @@
                         </ItemTemplate>
                         <SelectedItemStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
                     </asp:DataList>
-                    <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA] FROM [LapTops] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [MASP], [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA] FROM [LapTops] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
                     <asp:Label ID="Label1" runat="server" ForeColor="White"></asp:Label>
                 </div>
                 <div class=" justify-content-right text-left">
@@ -125,7 +125,7 @@
                         <div class="contents pt-0-5">
                             <img src="Images/Content/dessss-1200x90.png" style="width: 1336px; height: 100px" />
                         </div>
-                        <asp:DataList ID="DataList2" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource1" BorderRadius="15px" BackColor="#FFBF00" BorderColor="#FFBF00" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px">
+                        <asp:DataList ID="DataList2" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource1" BorderRadius="15px" BackColor="#FFBF00" BorderColor="#FFBF00" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex2" OnSelectedIndexChanged="DataList2_SelectedIndexChanged">
                             <ItemTemplate>
                                 <div class="card-deck">
                                     <div class="card zoom" style="height: 300px">
@@ -151,7 +151,7 @@
                         <div class="contents pt-0-5">
                             <img src="Images/Content/dmxd-1200x90.png" style="width: 1336px; height: 100px" />
                         </div>
-                        <asp:DataList ID="DataList3" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource2" BorderRadius="15px" BackColor="#EB018A" BorderColor="#EB018A" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px">
+                        <asp:DataList ID="DataList3" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource2" BorderRadius="15px" BackColor="#EB018A" BorderColor="#EB018A" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px" OnItemCommand="SelectedIndex3" OnSelectedIndexChanged="DataList3_SelectedIndexChanged">
                             <ItemTemplate>
                                 <div class="card-deck">
                                     <div class="card zoom" style="height: 300px">

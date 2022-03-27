@@ -120,6 +120,60 @@
                     <asp:SqlDataSource ID="PRODUCTS" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TENSP], [ANHSP], [DONGIA], [MANHINH], [CPU], [VGA] FROM [LapTops] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
                     <asp:Label ID="Label1" runat="server" ForeColor="White"></asp:Label>
                 </div>
+                <div class=" justify-content-right text-left">
+                    <div class="contents pt-5">
+                        <div class="contents pt-0-5">
+                            <img src="Images/Content/dessss-1200x90.png" style="width: 1336px; height: 100px" />
+                        </div>
+                        <asp:DataList ID="DataList2" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource1" BorderRadius="15px" BackColor="#FFBF00" BorderColor="#FFBF00" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px">
+                            <ItemTemplate>
+                                <div class="card-deck">
+                                    <div class="card zoom" style="height: 300px">
+                                        <div class="imgs pt-3">
+                                            <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="208px" Width="208px" ImageUrl='<%# Eval("HinhAnh") %>' />
+                                        </div>
+                                        <div class="card-body" style="font-size: 11px">
+                                            Tensp:
+                                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
+                                            <br />
+                                            DonGia:
+                                            <asp:Label ID="DonGiaLabel" runat="server" Text='<%# Eval("DonGia") %>' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [HinhAnh], [DonGia] FROM [DienThoai] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
+                    </div>
+                </div>
+                <div class=" justify-content-right text-left">
+                    <div class="contents pt-5">
+                        <div class="contents pt-0-5">
+                            <img src="Images/Content/dmxd-1200x90.png" style="width: 1336px; height: 100px" />
+                        </div>
+                        <asp:DataList ID="DataList3" runat="server" DataKeyField="Masp" DataSourceID="SqlDataSource2" BorderRadius="15px" BackColor="#EB018A" BorderColor="#EB018A" BorderWidth="2px" CellPadding="6" CellSpacing="6" RepeatColumns="6" RepeatDirection="Horizontal" Width="1150px">
+                            <ItemTemplate>
+                                <div class="card-deck">
+                                    <div class="card zoom" style="height: 300px">
+                                        <div class="imgs pt-3">
+                                            <asp:ImageButton ID="ImageButton1" runat="server" CommandName="redirect" Height="130px" Width="208px" ImageUrl='<%# Eval("HinhAnh") %>' />
+                                        </div>
+                                        <div class="card-body" style="font-size: 11px">
+                                            Tensp:
+                            <asp:Label ID="TenspLabel" runat="server" Text='<%# Eval("Tensp") %>' />
+                                            <br />
+                                            Dongia:
+                            <asp:Label ID="DongiaLabel" runat="server" Text='<%# Eval("Dongia") %>' />
+                                            <br />
+                                            Kichthuoc:
+                            <asp:Label ID="KichthuocLabel" runat="server" Text='<%# Eval("Kichthuoc") %>' />
+                                            <br />
+                                        </div>
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Masp], [Tensp], [Dongia], [Kichthuoc], [HinhAnh] FROM [TiVi] WHERE DEALS = 'DEALS'"></asp:SqlDataSource>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Footer -->

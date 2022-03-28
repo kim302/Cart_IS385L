@@ -118,7 +118,7 @@
                         <div class="card mb-3 pl-5" style="max-width: 840px; max-height: 1000px">
                             <div class="row g-0">
                                 <div class="col-md-6">
-                                    <asp:Image ID="Image1" class="img-fluid rounded-start" runat="server" Height="335px" ImageUrl='<%# Eval("HinhAnh") %>' Width="5px" /><br />
+                                    <asp:Image ID="Image1" class="img-fluid rounded-start" runat="server" Height="335px" ImageUrl='<%# Eval("HinhAnh") %>' Width="549px" /><br />
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card-body">

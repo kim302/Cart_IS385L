@@ -7,42 +7,38 @@ using System.Web.UI.WebControls;
 
 namespace Cart
 {
-    public partial class DanhSachMenu : System.Web.UI.Page
+    public partial class TimKiem : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label1.Text = Session["FIND"].ToString();
         }
-        protected void SelectedIndex2(object source, DataListCommandEventArgs e)
+        protected void TimKiemDienThoai(object source, DataListCommandEventArgs e)
         {
             if (e.CommandName == "redirect")
             {
-                Label1.Text = DataList2.DataKeys[e.Item.ItemIndex].ToString();
-                Session["ID"] = Label1.Text;
+                Label2.Text = DataList1.DataKeys[e.Item.ItemIndex].ToString();
+                Session["ID"] = Label2.Text;
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
         }
-        protected void SelectedIndex1(object source, DataListCommandEventArgs e)
+        protected void TimKiemLapTops(object source, DataListCommandEventArgs e)
         {
             if (e.CommandName == "redirect")
             {
-                Label1.Text = DataList1.DataKeys[e.Item.ItemIndex].ToString();
-                Session["ID"] = Label1.Text;
+                Label2.Text = DataList2.DataKeys[e.Item.ItemIndex].ToString();
+                Session["ID"] = Label2.Text;
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
         }
-        protected void SelectedIndex3(object source, DataListCommandEventArgs e)
+        protected void TimKiemTiVi(object source, DataListCommandEventArgs e)
         {
             if (e.CommandName == "redirect")
             {
-                Label1.Text = DataList3.DataKeys[e.Item.ItemIndex].ToString();
-                Session["ID"] = Label1.Text;
+                Label2.Text = DataList3.DataKeys[e.Item.ItemIndex].ToString();
+                Session["ID"] = Label2.Text;
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
-        }
-        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)

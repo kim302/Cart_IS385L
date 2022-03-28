@@ -11,7 +11,7 @@ namespace Cart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //user.Text = Session["FULLNAME"].ToString();
+            user.Text = Session["FULLNAME"].ToString();
         }
         protected void SelectedIndex1(object source, DataListCommandEventArgs e)
         {
@@ -51,6 +51,17 @@ namespace Cart
         }
 
         protected void DataList3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)// tìm kiếm sản phẩm
+        {
+            Session["FIND"] = txtSearch.Text;
+            Response.Redirect("TimKiem.aspx");
+        }
+
+        protected void txtSearch_TextChanged(object sender, EventArgs e)
         {
 
         }

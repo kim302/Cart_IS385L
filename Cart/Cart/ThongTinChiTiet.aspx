@@ -175,7 +175,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <button type="button" class="btn btn-primary">
+                    <button id="btnAddToCart" type="button" class="btn btn-primary">
                         <i class="fa-regular fa-cart-circle-check"></i>
                         Thêm vào giỏ hàng</button>
                 </div>

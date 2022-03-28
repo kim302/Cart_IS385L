@@ -21,6 +21,7 @@ namespace Cart
             {
                 Label1.Text = DataList3.DataKeys[e.Item.ItemIndex].ToString();
                 Session["ID"] = Label1.Text;
+                Session["LOAI"] = "TiVi";
                 Response.Redirect("ThongTinChiTiet.aspx");
             }
         }
